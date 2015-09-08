@@ -8,7 +8,7 @@ WriteMakefile(
     PREREQ_PM         => {}, # e.g., Module::Name => 1.1
     ABSTRACT_FROM     => 'lib/LibJIT.pm', # retrieve abstract from module
     AUTHOR            => 'Vickenty Fesunov <cpan+libjit@setattr.net>',
-    #LICENSE           => 'perl',
+    LICENSE           => 'lgpl_2_1',
     #Value must be from legacy list of licenses here
     #http://search.cpan.org/perldoc?Module%3A%3ABuild%3A%3AAPI
     LIBS              => [''], # e.g., '-lm'
