@@ -11,21 +11,21 @@ while (<>) {
     push @types, $1;
 }
 
-my $prefix = "loljit_const_";
+my $prefix = "libjit_const_";
 
 open my $c, ">", "jit_type-c.inc";
 $c->print("jit_type_t $prefix$_ (void) { return $_; }\n")
     foreach @types;
 
 open my $xs, ">", "jit_type-xs.inc";
-$xs->print("MODULE = LOLJIT  PACKAGE = LOLJIT  PREFIX = $prefix\n\n");
+$xs->print("MODULE = LibJIT  PACKAGE = LibJIT  PREFIX = $prefix\n\n");
 $xs->print("jit_type_t\n$prefix$_()\n\n")
     foreach @types;
 
-my $pm = read_file("lib/LOLJIT.pm");
+my $pm = read_file("lib/LibJIT.pm");
 my $types = join "", map "    $_\n", @types;
 $pm =~ s/(our\s+\@TYPES\s*=\s*qw\()[^\)]*(\);)/$1\n$types$2/m;
 
-open my $pmf, ">", "lib/LOLJIT.pm";
+open my $pmf, ">", "lib/LibJIT.pm";
 $pmf->print($pm);
 

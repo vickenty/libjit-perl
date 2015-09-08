@@ -1,92 +1,92 @@
-MODULE = LOLJIT  PACKAGE = LOLJIT  PREFIX = loljit_const_
+MODULE = LibJIT  PACKAGE = LibJIT  PREFIX = libjit_const_
 
 jit_type_t
-loljit_const_jit_type_void()
+libjit_const_jit_type_void()
 
 jit_type_t
-loljit_const_jit_type_sbyte()
+libjit_const_jit_type_sbyte()
 
 jit_type_t
-loljit_const_jit_type_ubyte()
+libjit_const_jit_type_ubyte()
 
 jit_type_t
-loljit_const_jit_type_short()
+libjit_const_jit_type_short()
 
 jit_type_t
-loljit_const_jit_type_ushort()
+libjit_const_jit_type_ushort()
 
 jit_type_t
-loljit_const_jit_type_int()
+libjit_const_jit_type_int()
 
 jit_type_t
-loljit_const_jit_type_uint()
+libjit_const_jit_type_uint()
 
 jit_type_t
-loljit_const_jit_type_nint()
+libjit_const_jit_type_nint()
 
 jit_type_t
-loljit_const_jit_type_nuint()
+libjit_const_jit_type_nuint()
 
 jit_type_t
-loljit_const_jit_type_long()
+libjit_const_jit_type_long()
 
 jit_type_t
-loljit_const_jit_type_ulong()
+libjit_const_jit_type_ulong()
 
 jit_type_t
-loljit_const_jit_type_float32()
+libjit_const_jit_type_float32()
 
 jit_type_t
-loljit_const_jit_type_float64()
+libjit_const_jit_type_float64()
 
 jit_type_t
-loljit_const_jit_type_nfloat()
+libjit_const_jit_type_nfloat()
 
 jit_type_t
-loljit_const_jit_type_void_ptr()
+libjit_const_jit_type_void_ptr()
 
 jit_type_t
-loljit_const_jit_type_sys_bool()
+libjit_const_jit_type_sys_bool()
 
 jit_type_t
-loljit_const_jit_type_sys_char()
+libjit_const_jit_type_sys_char()
 
 jit_type_t
-loljit_const_jit_type_sys_schar()
+libjit_const_jit_type_sys_schar()
 
 jit_type_t
-loljit_const_jit_type_sys_uchar()
+libjit_const_jit_type_sys_uchar()
 
 jit_type_t
-loljit_const_jit_type_sys_short()
+libjit_const_jit_type_sys_short()
 
 jit_type_t
-loljit_const_jit_type_sys_ushort()
+libjit_const_jit_type_sys_ushort()
 
 jit_type_t
-loljit_const_jit_type_sys_int()
+libjit_const_jit_type_sys_int()
 
 jit_type_t
-loljit_const_jit_type_sys_uint()
+libjit_const_jit_type_sys_uint()
 
 jit_type_t
-loljit_const_jit_type_sys_long()
+libjit_const_jit_type_sys_long()
 
 jit_type_t
-loljit_const_jit_type_sys_ulong()
+libjit_const_jit_type_sys_ulong()
 
 jit_type_t
-loljit_const_jit_type_sys_longlong()
+libjit_const_jit_type_sys_longlong()
 
 jit_type_t
-loljit_const_jit_type_sys_ulonglong()
+libjit_const_jit_type_sys_ulonglong()
 
 jit_type_t
-loljit_const_jit_type_sys_float()
+libjit_const_jit_type_sys_float()
 
 jit_type_t
-loljit_const_jit_type_sys_double()
+libjit_const_jit_type_sys_double()
 
 jit_type_t
-loljit_const_jit_type_sys_long_double()
+libjit_const_jit_type_sys_long_double()
 

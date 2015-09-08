@@ -1,4 +1,4 @@
-package LOLJIT;
+package LibJIT;
 
 use 5.020002;
 use strict;
@@ -14,7 +14,7 @@ our @ISA = qw(Exporter);
 # names by default without a very good reason. Use EXPORT_OK instead.
 # Do not simply export all your public functions/methods/constants.
 
-# This allows declaration	use LOLJIT ':all';
+# This allows declaration	use LibJIT ':all';
 # If you do not need this, moving things directly into @EXPORT or @EXPORT_OK
 # will save memory.
 
@@ -825,7 +825,7 @@ sub AUTOLOAD {
     my $constname;
     our $AUTOLOAD;
     ($constname = $AUTOLOAD) =~ s/.*:://;
-    croak "&LOLJIT::constant not defined" if $constname eq 'constant';
+    croak "&LibJIT::constant not defined" if $constname eq 'constant';
     my ($error, $val) = constant($constname);
     if ($error) { croak $error; }
     {
@@ -842,7 +842,7 @@ sub AUTOLOAD {
 }
 
 require XSLoader;
-XSLoader::load('LOLJIT', $VERSION);
+XSLoader::load('LibJIT', $VERSION);
 
 # Preloaded methods go here.
 
@@ -854,16 +854,16 @@ __END__
 
 =head1 NAME
 
-LOLJIT - Perl extension for blah blah blah
+LibJIT - Perl extension for blah blah blah
 
 =head1 SYNOPSIS
 
-  use LOLJIT;
+  use LibJIT;
   blah blah blah
 
 =head1 DESCRIPTION
 
-Stub documentation for LOLJIT, created by h2xs. It looks like the
+Stub documentation for LibJIT, created by h2xs. It looks like the
 author of the extension was negligent enough to leave the stub
 unedited.
 
@@ -1952,7 +1952,7 @@ If you have a web site set up for your module, mention it here.
 
 =head1 AUTHOR
 
-Vickenty Fesunov, E<lt>cpan+loljit@setattr.netE<gt>
+Vickenty Fesunov, E<lt>cpan+libjit@setattr.netE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 

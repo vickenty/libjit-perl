@@ -3,11 +3,11 @@ use ExtUtils::MakeMaker;
 # See lib/ExtUtils/MakeMaker.pm for details of how to influence
 # the contents of the Makefile that is written.
 WriteMakefile(
-    NAME              => 'LOLJIT',
-    VERSION_FROM      => 'lib/LOLJIT.pm', # finds $VERSION, requires EU::MM from perl >= 5.5
+    NAME              => 'LibJIT',
+    VERSION_FROM      => 'lib/LibJIT.pm', # finds $VERSION, requires EU::MM from perl >= 5.5
     PREREQ_PM         => {}, # e.g., Module::Name => 1.1
-    ABSTRACT_FROM     => 'lib/LOLJIT.pm', # retrieve abstract from module
-    AUTHOR            => 'Vickenty Fesunov <cpan+loljit@setattr.net>',
+    ABSTRACT_FROM     => 'lib/LibJIT.pm', # retrieve abstract from module
+    AUTHOR            => 'Vickenty Fesunov <cpan+libjit@setattr.net>',
     #LICENSE           => 'perl',
     #Value must be from legacy list of licenses here
     #http://search.cpan.org/perldoc?Module%3A%3ABuild%3A%3AAPI
@@ -33,7 +33,7 @@ if  (eval {require ExtUtils::Constant; 1}) {
               {name=>"jit_abi_stdcall", macro=>"1"},
               {name=>"jit_abi_vararg", macro=>"1"});
   ExtUtils::Constant::WriteConstants(
-                                     NAME         => 'LOLJIT',
+                                     NAME         => 'LibJIT',
                                      NAMES        => \@names,
                                      DEFAULT_TYPE => 'IV',
                                      C_FILE       => 'const-c.inc',

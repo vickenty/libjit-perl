@@ -11,7 +11,7 @@
 #include "jit_type-c.inc"
 #include "av_to_pp.h"
 
-MODULE = LOLJIT		PACKAGE = LOLJIT		
+MODULE = LibJIT		PACKAGE = LibJIT
 
 INCLUDE: const-xs.inc
 

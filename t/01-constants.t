@@ -1,5 +1,5 @@
 # Before 'make install' is performed this script should be runnable with
-# 'make test'. After 'make install' it should work as 'perl LOLJIT.t'
+# 'make test'. After 'make install' it should work as 'perl LibJIT.t'
 
 #########################
 
@@ -9,7 +9,7 @@ use strict;
 use warnings;
 
 use Test::More tests => 2;
-BEGIN { use_ok('LOLJIT') };
+BEGIN { use_ok('LibJIT') };
 
 
 my $fail = 0;
@@ -18,7 +18,7 @@ foreach my $constname (qw(
 	JIT_PROT_READ_WRITE jit_abi_cdecl jit_abi_fastcall jit_abi_stdcall
 	jit_abi_vararg)) {
   next if (eval "my \$a = $constname; 1");
-  if ($@ =~ /^Your vendor has not defined LOLJIT macro $constname/) {
+  if ($@ =~ /^Your vendor has not defined LibJIT macro $constname/) {
     print "# pass: $@";
   } else {
     print "# fail: $@";

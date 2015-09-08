@@ -1,7 +1,7 @@
-MODULE = LOLJIT  PACKAGE = LOLJIT  PREFIX = loljit_misc_
+MODULE = LibJIT  PACKAGE = LibJIT  PREFIX = libjit_misc_
 
 jit_label_t
-loljit_misc_jit_label_undefined()
+libjit_misc_jit_label_undefined()
 CODE:
 	RETVAL = jit_label_undefined;
 OUTPUT:

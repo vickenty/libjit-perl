@@ -4,7 +4,7 @@ use warnings;
 use Test::More;
 
 BEGIN {
-    use_ok("LOLJIT", ":all");
+    use_ok("LibJIT", ":all");
 }
 
 my $ctx = jit_context_create;

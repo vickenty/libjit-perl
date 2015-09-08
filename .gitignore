@@ -4,6 +4,6 @@ MYMETA.*
 Makefile
 blib
 pm_to_blib
-LOLJIT.c
-LOLJIT.bs
-LOLJIT.o
+LibJIT.c
+LibJIT.bs
+LibJIT.o
