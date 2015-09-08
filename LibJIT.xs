@@ -3719,4 +3719,3 @@ jit_dump_function(stream, func, name)
 	char*	name
 
 INCLUDE: jit_type-xs.inc
-INCLUDE: jit_misc-xs.inc

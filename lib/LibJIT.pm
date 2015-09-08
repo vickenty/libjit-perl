@@ -51,10 +51,6 @@ our @TYPES = qw(
     jit_type_sys_long_double
 );
 
-my @MISC = qw(
-    jit_label_undefined
-);
-
 our %EXPORT_TAGS = ( 'all' => [ qw(
 	JIT_PROT_EXEC_READ
 	JIT_PROT_EXEC_READ_WRITE
@@ -65,6 +61,7 @@ our %EXPORT_TAGS = ( 'all' => [ qw(
 	jit_abi_fastcall
 	jit_abi_stdcall
 	jit_abi_vararg
+	jit_label_undefined
 	_jit_get_frame_address
 	_jit_get_next_frame_address
 	_jit_get_return_address
@@ -800,7 +797,7 @@ our %EXPORT_TAGS = ( 'all' => [ qw(
         jit_dump_value
         jit_dump_insn
         jit_dump_function
-), @TYPES, @MISC ] );
+), @TYPES ] );
 
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 

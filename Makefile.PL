@@ -31,7 +31,8 @@ if  (eval {require ExtUtils::Constant; 1}) {
               {name=>"jit_abi_cdecl", macro=>"1"},
               {name=>"jit_abi_fastcall", macro=>"1"},
               {name=>"jit_abi_stdcall", macro=>"1"},
-              {name=>"jit_abi_vararg", macro=>"1"});
+              {name=>"jit_abi_vararg", macro=>"1"},
+              {name=>"jit_label_undefined", macro=>1});
   ExtUtils::Constant::WriteConstants(
                                      NAME         => 'LibJIT',
                                      NAMES        => \@names,
