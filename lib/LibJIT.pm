@@ -797,17 +797,7 @@ our %EXPORT_TAGS = (
 
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 
-our @EXPORT = qw(
-    JIT_PROT_EXEC_READ
-    JIT_PROT_EXEC_READ_WRITE
-    JIT_PROT_NONE
-    JIT_PROT_READ
-    JIT_PROT_READ_WRITE
-    jit_abi_cdecl
-    jit_abi_fastcall
-    jit_abi_stdcall
-    jit_abi_vararg
-);
+our @EXPORT = qw();
 
 our $VERSION = '0.02';
 

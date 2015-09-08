@@ -9,7 +9,7 @@ use strict;
 use warnings;
 
 use Test::More tests => 2;
-BEGIN { use_ok('LibJIT') };
+BEGIN { use_ok('LibJIT', ':all') };
 
 
 my $fail = 0;
