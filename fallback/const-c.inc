@@ -78,14 +78,15 @@ my @names = (qw(),
             {name=>"jit_abi_cdecl", type=>"IV", macro=>"1"},
             {name=>"jit_abi_fastcall", type=>"IV", macro=>"1"},
             {name=>"jit_abi_stdcall", type=>"IV", macro=>"1"},
-            {name=>"jit_abi_vararg", type=>"IV", macro=>"1"});
+            {name=>"jit_abi_vararg", type=>"IV", macro=>"1"},
+            {name=>"jit_label_undefined", type=>"IV", macro=>"1"});
 
 print constant_types(), "\n"; # macro defs
-foreach (C_constant ("LOLJIT", 'constant', 'IV', $types, undef, 3, @names) ) {
+foreach (C_constant ("LibJIT", 'constant', 'IV', $types, undef, 3, @names) ) {
     print $_, "\n"; # C constant subs
 }
 print "\n#### XS Section:\n";
-print XS_constant ("LOLJIT", $types);
+print XS_constant ("LibJIT", $types);
 __END__
    */
 
@@ -118,9 +119,24 @@ __END__
     }
     break;
   case 19:
-    if (memEQ(name, "JIT_PROT_READ_WRITE", 19)) {
-      *iv_return = JIT_PROT_READ_WRITE;
-      return PERL_constant_ISIV;
+    /* Names all of length 19.  */
+    /* JIT_PROT_READ_WRITE jit_label_undefined */
+    /* Offset 13 gives the best switch position.  */
+    switch (name[13]) {
+    case '_':
+      if (memEQ(name, "JIT_PROT_READ_WRITE", 19)) {
+      /*                            ^            */
+        *iv_return = JIT_PROT_READ_WRITE;
+        return PERL_constant_ISIV;
+      }
+      break;
+    case 'e':
+      if (memEQ(name, "jit_label_undefined", 19)) {
+      /*                            ^            */
+        *iv_return = jit_label_undefined;
+        return PERL_constant_ISIV;
+      }
+      break;
     }
     break;
   case 24:
