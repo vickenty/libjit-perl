@@ -9,7 +9,6 @@
 
 #include "const-c.inc"
 #include "jit_type-c.inc"
-#include "jit_xsub-c.inc"
 #include "av_to_pp.h"
 
 MODULE = LOLJIT		PACKAGE = LOLJIT		
@@ -3721,4 +3720,3 @@ jit_dump_function(stream, func, name)
 
 INCLUDE: jit_type-xs.inc
 INCLUDE: jit_misc-xs.inc
-INCLUDE: jit_xsub-xs.inc
