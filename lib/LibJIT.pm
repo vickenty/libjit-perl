@@ -845,11 +845,11 @@ LibJIT - Perl bindings for GNU LibJIT
 
 =head1 DESCRIPTION
 
-As straightforward as bindings can be - every function and constant defined by
-the C library a Perl subroutine is exported.
+As straightforward as bindings can be - for every function and constant defined
+by the C library a Perl subroutine is exported.
 
-Where C function takes a pointer and number of elements arguments, these were
-replaced by a single argument expecting an array reference. This should be
+Where C function takes two arguments, a pointer and number of elements, Perl
+function would take a single array reference instead. This should be
 straightforward in most cases, except, probably, C<jit_function_apply>.
 
 In C, C<jit_function_apply> has this signature (see LibJIT documentation for
@@ -858,10 +858,10 @@ description of each argument):
     int jit_function_apply (jit_function_t func, void **args, void *return_area)
 
 In Perl, C<args> is represented as a reference to an array of strings, where
-each string contains binary representation of the argument produced by C<pack>.
-C<return_area> should be a scalar variable, when C<jit_function_apply> returns
-it will be set to the binary representation of the return value, that can be
-decoded with C<unpack>.
+each string contains binary representation of the argument, as produced by
+C<pack>. C<return_area> should be a scalar variable, when C<jit_function_apply>
+returns it will be set to the binary representation of the return value, that
+can be decoded with C<unpack>.
 
 L<FFI::Raw> in combination with C<jit_function_to_closure> can be a cleaner way
 to call compiled functions.
